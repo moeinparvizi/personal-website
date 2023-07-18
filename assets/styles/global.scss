@@ -1,0 +1,51 @@
+// imports
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// colors
+
+$black : rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$gray: rgb(155, 155, 155);
+$pink : rgb(255, 162, 178);
+
+// repetitious codes
+
+:root{
+    font-size: 10px;
+}
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    ul{
+        list-style-type: none;
+    }
+    a,
+    a:visited,
+    a:active{
+        text-decoration: none;
+        background-color: black;
+    }
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-between{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
