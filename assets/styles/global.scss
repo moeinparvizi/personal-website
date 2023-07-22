@@ -49,3 +49,11 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+// animation codes
+
+@keyframes moonrotate {
+    to{
+        rotate: 36000deg;
+    }
+}
