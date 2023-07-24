@@ -27,16 +27,40 @@ header {
         }
 
         >div:nth-of-type(2) {
-            color: $white;
+            // color: $white;
 
-            >svg {
+            >div:nth-of-type(1) {
                 width: 40px;
                 height: 40px;
                 margin: 20px;
-                position: fixed;
-                left: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >div{
+                    width: 30px;
+                    height: 4px;
+                    border-radius: 10px;
+                    background-color: $white;
+                    transition: all .4s ease;
+                    &::before,
+                    &::after{
+                        content: '';
+                        background-color: $white;
+                        width: 30px;
+                        height: 4px;
+                        position: absolute;
+                        border-radius: 10px;
+                        transition: all .4s ease;
+                    }
+                    &::after{
+                        transform: translateY(11px);
+                    }
+                    &::before{
+                        transform: translateY(-11px);
+                    }
+                }
             }
-            >div {
+            >div:nth-of-type(2) {
                  background-color: #181D23;
                  width: 100%;
                  position: fixed;
@@ -91,7 +115,19 @@ header {
                  }
             }
             &:hover{
-                >div{
+                >div:nth-of-type(1){
+                    >div{
+                        transform: translateX(-40px);
+                        background-color: transparent;
+                        &::after{
+                            transform: translate(30px,0)rotate(45deg);
+                        }
+                        &::before{
+                            transform: translate(30px,0)rotate(-45deg);
+                        }
+                    }
+                }
+                >div:nth-of-type(2){
                     visibility: visible;
                     opacity: 1;
                 }
