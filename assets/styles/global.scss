@@ -11,40 +11,45 @@ $pink : rgb(255, 162, 178);
 
 // repetitious codes
 
-:root{
+:root {
     font-size: 10px;
 }
 
-*{
-    margin: 0;padding: 0;box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     overflow-x: hidden;
-    ul{
+
+    ul {
         list-style-type: none;
     }
+
     a,
     a:visited,
-    a:active{
+    a:active {
         text-decoration: none;
         background-color: black;
     }
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
 }
 
-.row-between{
+.row-between {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.row-center{
+.row-center {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,7 +58,59 @@ body{
 // animation codes
 
 @keyframes moonrotate {
-    to{
+    to {
         rotate: 36000deg;
+    }
+}
+
+@keyframes meteorite {
+    0% {
+        top: -50px;
+        left: -50px;
+    }
+    10% {
+        top: 100%;
+        left: 100%;
+    }
+    10.1%,
+    100% {
+        top: -100px;
+        left: -100px;
+    }
+}
+@keyframes meteorite2 {
+    0% {
+        top: 0;
+        left: 120%;
+    }
+    10% {
+        top: 100%;
+        left: 0%;
+    }
+    10.1%,
+    100% {
+        top: 0;
+        left: 120%;
+    }
+}
+
+// mixin
+
+@mixin stars($size) {
+    >span {
+        position: absolute;
+        width: $size+#{'px'};
+        height: $size+#{'px'};
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 10px white;
+        z-index: 2;
+    }
+
+    @for $i from 1 through 100 {
+        >span:nth-of-type(#{$i}) {
+            top: random(100)+0%;
+            left: random(100)+0%;
+        }
     }
 }

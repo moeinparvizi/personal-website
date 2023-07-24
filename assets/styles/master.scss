@@ -10,7 +10,6 @@ header {
     position: relative;
 
     >nav {
-        border: 1px solid white;
 
         >div:nth-of-type(1) {
             display: flex;
@@ -39,25 +38,46 @@ header {
     }
 
     >.stars {
-        >span {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            background-color: white;
-            box-shadow: 0 0 10px white;
-            z-index: 2;
-        }
+        @include stars(1);
+    }
+    >.starsbig {
+        @include stars(3);
+    }
+    >.starsvbig {
+        @include stars(5);
+    }
+    >.meteorite{
+        // @for $i from 1 through 3{
+        //     >span:nth-of-type(#{$i}){
 
-        @for $i from 1 through 100 {
-            >span:nth-of-type(#{$i}) {
-                top: random(100)+0%;
-                left: random(100)+0%;
-            }
+        //     }
+        // }
+        >span:nth-of-type(1){
+            width: 50px;
+            height: 5px;
+            position: absolute;
+            border-radius: 50%;
+            transform: rotate(30deg);
+            box-shadow: 0 0 20px $white;
+            background-color: $white;
+            opacity: .5;
+            animation: meteorite 4s linear infinite forwards;
+        }
+        >span:nth-of-type(2){
+            width: 80px;
+            height: 5px;
+            position: absolute;
+            top: 0;
+            left: 120%;
+            border-radius: 50%;
+            transform: rotate(150deg);
+            box-shadow: 0 0 30px $white;
+            background-color: $white;
+            animation: meteorite2 2s linear infinite forwards 5s;
         }
     }
 
     >.background {
-        border: 1px solid red;
 
         >figure {
             position: absolute;
@@ -102,14 +122,13 @@ header {
         justify-content: center;
         margin-top: 100px;
         width: 100%;
-        border: 1px solid white ;
 
         >.text-header-center {
             width: 30%;
             flex-direction: column;
             flex-wrap: wrap;
-            border: 1px solid white;
-            height: auto;
+            height: 200px;
+            border: 1px solid red;
             >h1{
                 font-size: 5rem;
                 font-style: italic;
