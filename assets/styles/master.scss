@@ -33,6 +33,68 @@ header {
                 width: 40px;
                 height: 40px;
                 margin: 20px;
+                position: fixed;
+                left: 95%;
+            }
+            >div {
+                 background-color: #181D23;
+                 width: 100%;
+                 position: fixed;
+                 top: 80px;
+                 left: 100%;
+                 transform: translateX(-100%);
+                 height: 400px;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+                 visibility: hidden;
+                 opacity: 0;
+                 >ul{
+                    >li{
+                        height: 50px;
+                        text-align: center;
+                        width: 100px;
+                        position: relative;
+                        overflow: hidden;
+                        transition: .4s;
+                        >a{
+                            text-transform: uppercase;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            width: 100%;
+                            color: $white;
+                            transition: .4s;
+                            &::after{
+                                content: 'go';
+                                transition: .4s;
+                                display: flex;
+                                height: 100%;
+                                width: 100%;
+                                transform: translateY(50px);
+                                position: absolute;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                        &:hover{
+                            >a{
+                                transform: translateY(-50px);
+                                // >a::after{
+                                //     transform: translateY(50%);
+                                // }
+                            }
+                        }
+                    }
+                 }
+            }
+            &:hover{
+                >div{
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -47,7 +109,7 @@ header {
         @include stars(5);
     }
     >.meteorite{
-        // @for $i from 1 through 3{
+        // @for $i from 1 through 2{
         //     >span:nth-of-type(#{$i}){
 
         //     }
@@ -128,7 +190,6 @@ header {
             flex-direction: column;
             flex-wrap: wrap;
             height: 200px;
-            border: 1px solid red;
             >h1{
                 font-size: 5rem;
                 font-style: italic;
