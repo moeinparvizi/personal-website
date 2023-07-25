@@ -541,7 +541,7 @@ header {
             >.moon{
                 width: 800px;
                 height: 800px;
-                top: 30%;
+                top: 40%;
                 left: 40%;
                 z-index: 2;
             }
@@ -571,10 +571,12 @@ header {
                         transform: translateY(6px);
                     }
                     &:nth-of-type(2){
-                        transform: translate(-600px,45px);
+                        transform: translate(-650px,45px);
                     }
                 }
             }
         }
     }
 }
+
+@import 'sections';
