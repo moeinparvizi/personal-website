@@ -3,7 +3,7 @@
 header {
     width: 100%;
     height: 120vh;
-    background-color: #202934;
+    background-color: $h-bg;
     -webkit-clip-path: polygon(100% 0, 100% 84%, 30% 100%, 0 85%, 0 0);
     clip-path: polygon(100% 0, 100% 84%, 30% 100%, 0 85%, 0 0);
     position: relative;
@@ -21,7 +21,7 @@ header {
             }
 
             >div:nth-of-type(2) {
-                color: rgb(204, 204, 204);
+                color: $t-white;
             }
         }
 
@@ -29,7 +29,7 @@ header {
             // color: $white;
 
             >.menu {
-                      width: 40px;
+                width: 40px;
                 height: 40px;
                 margin: 20px;
                 display: flex;
@@ -38,6 +38,15 @@ header {
                 position: fixed;
                 left: 95%;
 
+                &:hover{
+                    >div:nth-of-type(1){
+                        background-color: $pink;
+                        &::after,
+                        &::before{
+                            background-color: $pink;
+                        }
+                    }
+                }
                 >div:nth-of-type(1) {
                     width: 30px;
                     height: 4px;
@@ -66,7 +75,7 @@ header {
                 }
 
                 >div:nth-of-type(2) {
-                    background-color: #181D23;
+                    background-color: $m-bg;
                     width: 100%;
                     position: fixed;
                     top: 80px;
@@ -124,25 +133,6 @@ header {
                     }
                 }
 
-                &:hover {
-                    >div:nth-of-type(1) {
-                        transform: translateX(-40px);
-                        background-color: transparent;
-
-                        &::after {
-                            transform: translate(30px, 0)rotate(45deg);
-                        }
-
-                        &::before {
-                            transform: translate(30px, 0)rotate(-45deg);
-                        }
-                    }
-
-                    // >div:nth-of-type(2) {
-                    //     visibility: visible;
-                    //     opacity: 1;
-                    // }
-                }
             }
 
         }
@@ -204,11 +194,11 @@ header {
             z-index: 3;
 
             >img {
-                color: black;
+                color: $black;
             }
 
             >div {
-                background-color: #181D23;
+                background-color: $m-bg;
                 height: 300px;
                 position: absolute;
                 bottom: -270px;
@@ -247,11 +237,11 @@ header {
             >h1 {
                 font-size: 5rem;
                 font-style: italic;
-                color: white;
+                color: $white;
                 margin-bottom: 20px;
 
                 >span {
-                    color: #F668B4;
+                    color: $pink;
                 }
             }
 
@@ -261,22 +251,22 @@ header {
                 margin: 10px;
                 text-transform: uppercase;
                 transition: .4s;
-                color: white;
+                color: $white;
                 transform: translateY(8px);
 
                 &:nth-of-type(1) {
-                    background-color: #F668B4;
-                    border: 2px solid #F668B4;
+                    background-color: $pink;
+                    border: 2px solid $pink;
                 }
 
                 &:nth-of-type(2) {
-                    border: 2px solid white;
+                    border: 2px solid $white;
                     background-color: transparent;
                 }
 
                 &:hover {
-                    box-shadow: 0 0 30px #F668B4;
-                    border: 1px solid #F668B4;
+                    box-shadow: 0 0 30px $pink;
+                    border: 1px solid $pink;
                     transform: translateY(-8px);
                     background-color: transparent;
                 }
@@ -372,10 +362,10 @@ header {
                     // transform: translateY(140px);
                     width: 150px;
                     &:nth-of-type(1){
-                        transform: translateY(6px);
+                        transform: translateY(166px);
                     }
                     &:nth-of-type(2){
-                        transform: translate(-160px,65px);
+                        transform: translate(-160px,222px);
                     }
                 }
             }

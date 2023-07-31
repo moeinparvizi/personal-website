@@ -4,10 +4,12 @@
 
 // colors
 
-$black : rgb(0, 0, 0);
-$white: rgb(255, 255, 255);
-$gray: rgb(155, 155, 155);
-$pink : rgb(255, 162, 178);
+$black : #000000;
+$h-bg : #202934;
+$m-bg : #181D23;
+$white: #ffffff;
+$t-white: #cccccc;
+$pink : #F668B4;
 
 // repetitious codes
 
@@ -67,25 +69,30 @@ body {
         top: -50px;
         left: -50px;
     }
+
     10% {
         top: 100%;
         left: 100%;
     }
+
     10.1%,
     100% {
         top: -100px;
         left: -100px;
     }
 }
+
 @keyframes meteorite2 {
     0% {
         top: 0;
         left: 120%;
     }
+
     10% {
         top: 100%;
         left: 0%;
     }
+
     10.1%,
     100% {
         top: 0;
@@ -114,3 +121,17 @@ body {
     }
 }
 
+// added classes
+
+.clickMenuEffect {
+    transform: translateX(-40px) !important;
+    background-color: transparent !important;
+
+    &::after {
+        transform: translate(30px, 0)rotate(45deg) !important;
+    }
+
+    &::before {
+        transform: translate(30px, 0)rotate(-45deg) !important;
+    }
+}
