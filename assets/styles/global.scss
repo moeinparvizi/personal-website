@@ -1,3 +1,20 @@
+// fonts
+
+@font-face {
+    font-family: barker;
+    src: url("../fonts/wg_barker.ttf");
+}
+
+@font-face {
+    font-family: borel;
+    src: url("../fonts/Borel-Regular.ttf");
+}
+
+@font-face {
+    font-family: checkra;
+    src: url("../fonts/ChakraPetch-Bold.ttf ");
+}
+
 // imports
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -21,6 +38,10 @@ $pink : #F668B4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -100,6 +121,30 @@ body {
     }
 }
 
+@keyframes space-animation {
+    from {
+        background-position-x: -100%;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+@keyframes textRotate {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 // mixin
 
 @mixin stars($size) {
@@ -118,6 +163,70 @@ body {
             top: random(100)+0%;
             left: random(100)+0%;
         }
+    }
+}
+
+@mixin titletext {
+    font-size: 10rem;
+    font-weight: bolder;
+    font-family: barker;
+    letter-spacing: 20px;
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('../images/wp2793093-red-galaxy-wallpaper-hd.jpg');
+    background-size: 100%;
+    animation: textRotate 30s cubic-bezier(0.3, 0, 0.7, 1) infinite;
+
+
+    @media screen and (max-width:903px) {
+        font-size: 8rem;
+        letter-spacing: 10px;
+    }
+
+    @media screen and (max-width:723px) {
+        font-size: 6rem;
+        letter-spacing: 5px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 10rem;
+        letter-spacing: 5px;
+    }
+    @media screen and (min-width:1401px) {
+        font-size: 14rem;
+        letter-spacing: 5px;
+    }
+}
+
+@mixin glass {
+    .glass {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 40px;
+        width: 90%;
+        // height: 90%;
+        border-radius: 25px;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.384), inset 0 0 20px 0px white;
+        background: rgba(255, 255, 255, 0.205);
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255, 255, 255, 0.247);
+            z-index: -1;
+            border: none;
+        }
+
+        border: none;
     }
 }
 

@@ -14,6 +14,7 @@ header {
             display: flex;
             font-size: 3rem;
             padding: 20px;
+            font-family: borel;
 
             >div:nth-of-type(1) {
                 color: $white;
@@ -38,15 +39,17 @@ header {
                 position: fixed;
                 left: 95%;
 
-                &:hover{
-                    >div:nth-of-type(1){
+                &:hover {
+                    >div:nth-of-type(1) {
                         background-color: $pink;
+
                         &::after,
-                        &::before{
+                        &::before {
                             background-color: $pink;
                         }
                     }
                 }
+
                 >div:nth-of-type(1) {
                     width: 30px;
                     height: 4px;
@@ -107,9 +110,11 @@ header {
                                 width: 100%;
                                 color: $white;
                                 transition: .4s;
+                                font-family: checkra;
 
                                 &::after {
                                     content: 'go';
+                                    color: $pink;
                                     transition: .4s;
                                     display: flex;
                                     height: 100%;
@@ -227,6 +232,7 @@ header {
         justify-content: center;
         margin-top: 100px;
         width: 100%;
+        font-family: checkra;
 
         >.text-header-center {
             width: 30%;
@@ -236,9 +242,11 @@ header {
 
             >h1 {
                 font-size: 5rem;
-                font-style: italic;
+                // font-style: italic;
                 color: $white;
                 margin-bottom: 20px;
+                // letter-spacing: 10px;
+                font-weight: bold;
 
                 >span {
                     color: $pink;
@@ -252,7 +260,8 @@ header {
                 text-transform: uppercase;
                 transition: .4s;
                 color: $white;
-                transform: translateY(8px);
+                // transform: translateY(8px);
+                // z-index: 99;
 
                 &:nth-of-type(1) {
                     background-color: $pink;
@@ -267,7 +276,7 @@ header {
                 &:hover {
                     box-shadow: 0 0 30px $pink;
                     border: 1px solid $pink;
-                    transform: translateY(-8px);
+                    transform: translateY(-5px);
                     background-color: transparent;
                 }
             }
@@ -278,33 +287,39 @@ header {
 // media screen
 
 @media screen and (max-width:768px) {
+
     // mobile scope
-    header{
-        .row-between{
-            >div:nth-of-type(1){
-                >div{
+    header {
+        .row-between {
+            >div:nth-of-type(1) {
+                >div {
                     font-size: 2rem;
                 }
             }
-            >div:nth-of-type(2){
-                >.menu{
+
+            >div:nth-of-type(2) {
+                >.menu {
                     z-index: 2;
                     left: 80%;
-                    >div:nth-of-type(1){
+
+                    >div:nth-of-type(1) {
                         width: 20px;
                         z-index: 7;
                         height: 3px;
+
                         &::after,
-                        &::before{
+                        &::before {
                             width: 20px;
                             height: 3px;
                         }
                     }
-                    #list{
-                        >ul{
-                            >li{
+
+                    #list {
+                        >ul {
+                            >li {
                                 width: 100%;
-                                >a{
+
+                                >a {
                                     font-size: 3rem;
                                 }
                             }
@@ -313,59 +328,72 @@ header {
                 }
             }
         }
+
         >.stars,
         >.starsbig,
-        >.starsvbig{
-            >span{
+        >.starsvbig {
+            >span {
                 z-index: 11;
             }
         }
-        >.meteorite{
-            >span{
+
+        >.meteorite {
+            >span {
                 z-index: 3;
             }
-            >span:nth-of-type(1){
+
+            >span:nth-of-type(1) {
                 rotate: 30deg;
             }
-            >span:nth-of-type(2){
+
+            >span:nth-of-type(2) {
                 rotate: -30deg;
             }
         }
-        >.background{
-            >.trees{
+
+        >.background {
+            >.trees {
                 z-index: 99;
             }
-            >.moon{
+
+            >.moon {
                 width: 200px;
                 height: 500px;
                 top: 50%;
                 left: 40%;
                 z-index: 2;
             }
-            >.person{
+
+            >.person {
                 display: none;
             }
         }
-        >.text-header{
+
+        >.text-header {
             z-index: 1;
             transform: translateY(-100px);
-            >.text-header-center{
+
+            >.text-header-center {
                 width: 90%;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 font-weight: bold;
                 display: flex;
                 justify-content: center;
-                >h1{
-                    font-size: 4rem;
+
+                >h1 {
+                    font-size: 3rem;
                 }
-                >a{
+
+                >a {
                     // transform: translateY(140px);
-                    width: 150px;
-                    &:nth-of-type(1){
-                        transform: translateY(166px);
+                    width: 130px;
+
+                    &:nth-of-type(1) {
+                        transform: translateY(51px);
                     }
-                    &:nth-of-type(2){
-                        transform: translate(-160px,222px);
+
+                    &:nth-of-type(2) {
+                        transform: translate(-160px, 100px);
                     }
                 }
             }
@@ -374,33 +402,39 @@ header {
 }
 
 @media screen and (min-width:769px) {
+
     // tablet scope
-    header{
-        .row-between{
-            >div:nth-of-type(1){
-                >div{
+    header {
+        .row-between {
+            >div:nth-of-type(1) {
+                >div {
                     font-size: 3rem;
                 }
             }
-            >div:nth-of-type(2){
-                >.menu{
+
+            >div:nth-of-type(2) {
+                >.menu {
                     z-index: 2;
                     left: 90%;
-                    >div:nth-of-type(1){
+
+                    >div:nth-of-type(1) {
                         width: 20px;
                         z-index: 7;
                         height: 3px;
+
                         &::after,
-                        &::before{
+                        &::before {
                             width: 20px;
                             height: 3px;
                         }
                     }
-                    #list{
-                        >ul{
-                            >li{
+
+                    #list {
+                        >ul {
+                            >li {
                                 width: 100%;
-                                >a{
+
+                                >a {
                                     font-size: 3rem;
                                 }
                             }
@@ -409,95 +443,122 @@ header {
                 }
             }
         }
+
         >.stars,
         >.starsbig,
-        >.starsvbig{
-            >span{
+        >.starsvbig {
+            >span {
                 z-index: 11;
             }
         }
-        >.meteorite{
-            >span{
+
+        >.meteorite {
+            >span {
                 z-index: 3;
             }
-            >span:nth-of-type(1){
+
+            >span:nth-of-type(1) {
                 rotate: 25deg;
             }
-            >span:nth-of-type(2){
+
+            >span:nth-of-type(2) {
                 rotate: -24deg;
             }
         }
-        >.background{
-            >.trees{
+
+        >.background {
+            >.trees {
                 z-index: 99;
             }
-            >.moon{
+
+            >.moon {
                 width: 200px;
                 height: 500px;
                 top: 50%;
                 left: 40%;
                 z-index: 2;
             }
-            >.person{
+
+            >.person {
                 display: none;
             }
         }
-        >.text-header{
+
+        >.text-header {
             z-index: 1;
             transform: translateY(-50px);
-            >.text-header-center{
+
+            >.text-header-center {
                 width: 90%;
                 font-size: 1.5rem;
                 font-weight: bold;
                 display: flex;
                 justify-content: center;
-                >h1{
+
+                >h1 {
                     font-size: 5rem;
                 }
-                >a{
+
+                >a {
                     // transform: translateY(140px);
                     width: 150px;
-                    &:nth-of-type(1){
-                        transform: translateY(6px);
+
+                    &:nth-of-type(1) {
+                        position: absolute;
+                        top: 80%;
+                        left: 10% ;
+                        border: 1px solid white;
                     }
-                    &:nth-of-type(2){
-                        transform: translate(-400px,45px);
+
+                    &:nth-of-type(2) {
+                        position: absolute;
+                        top: 80%;
+                        left: 70% ;
                     }
                 }
             }
         }
     }
 }
+
 @media screen and (min-width:992px) {
+
     // desktop scope
-    header{
-        .row-between{
-            >div:nth-of-type(1){
-                >div{
+    header {
+        .row-between {
+            >div:nth-of-type(1) {
+                >div {
                     font-size: 4rem;
                 }
             }
-            >div:nth-of-type(2){
-                >.menu{
+
+            >div:nth-of-type(2) {
+                >.menu {
                     z-index: 2;
                     left: 94%;
-                    >div:nth-of-type(1){
+
+                    >div:nth-of-type(1) {
                         width: 20px;
                         z-index: 7;
                         height: 3px;
+
                         &::after,
-                        &::before{
+                        &::before {
                             width: 20px;
                             height: 3px;
                         }
                     }
-                    #list{
+
+                    #list {
                         justify-content: start;
-                        >ul{
+
+                        >ul {
                             margin-left: 130px;
-                            >li{
+
+                            >li {
                                 width: 100%;
-                                >a{
+
+                                >a {
                                     font-size: 3rem;
                                 }
                             }
@@ -506,64 +567,118 @@ header {
                 }
             }
         }
+
         >.stars,
         >.starsbig,
-        >.starsvbig{
-            >span{
+        >.starsvbig {
+            >span {
                 z-index: 11;
             }
         }
-        >.meteorite{
-            >span{
+
+        >.meteorite {
+            >span {
                 z-index: 3;
             }
-            >span:nth-of-type(1){
+
+            >span:nth-of-type(1) {
                 rotate: 4deg;
             }
-            >span:nth-of-type(2){
+
+            >span:nth-of-type(2) {
                 rotate: -4deg;
             }
         }
-        >.background{
-            >.trees{
+
+        >.background {
+            >.trees {
                 z-index: 99;
             }
-            >.moon{
+
+            >.moon {
                 width: 800px;
                 height: 800px;
                 top: 40%;
                 left: 40%;
                 z-index: 2;
             }
-            >.person{
+
+            >.person {
                 display: block;
                 top: 50%;
                 z-index: 99;
             }
         }
-        >.text-header{
+
+        >.text-header {
             z-index: 1;
-            transform: translateY(-50px);
             position: absolute;
             left: 10%;
-            >.text-header-center{
+            top: 50px;
+
+            >.text-header-center {
                 font-size: 1.5rem;
                 font-weight: bold;
                 display: flex;
                 justify-content: center;
-                >h1{
+
+                >h1 {
                     font-size: 5rem;
                 }
-                >a{
+
+                >a {
                     // transform: translateY(140px);
                     width: 150px;
-                    &:nth-of-type(1){
-                        transform: translateY(6px);
+
+                    &:nth-of-type(1) {
+                        position: absolute;
+                        top:70%;
+                        left: 20%;
                     }
-                    &:nth-of-type(2){
-                        transform: translate(-650px,45px);
+
+                    &:nth-of-type(2) {
+                        position: absolute;
+                        top:70%;
+                        left: 40%;
                     }
                 }
+            }
+        }
+    }
+}
+
+#up {
+    >a {
+        position: fixed;
+        left: 90%;
+        top: 90%;
+        width: 50px;
+        height: 50px;
+        // background-color: black;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .8;
+        transition: all .4s;
+        background-image: url('../images/earth-planet-solar-system-burn.jpg');
+        background-position: center;
+
+        @media screen and (max-width: 566px) {
+            left: 82%;
+        }
+
+        >i {
+            color: $white;
+            font-size: 3rem;
+        }
+
+        &:hover{
+            // background-color: $pink;
+            background-image: url('../images/222.jpg');
+            >i{
+                color: black;
             }
         }
     }
