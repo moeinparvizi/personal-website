@@ -11,6 +11,7 @@ $image: '../images/backgroundSection.png';
     transform: translateY(-200px);
     position: relative;
     z-index: -1;
+    font-family: main;
     // display: flex;
     // justify-content: center;
     // flex-direction: column;
@@ -18,8 +19,23 @@ $image: '../images/backgroundSection.png';
     >#about {
         @include titletext;
         padding-top: 250px;
+    
+
     }
-
-    @include glass;
-
+    >.glass{
+        @include glass;
+        display: flex;
+        >figure{
+            >img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+        >h5{
+            font-weight: bold;
+            font-size: 1.6rem;
+      
+        }
+    }
 }

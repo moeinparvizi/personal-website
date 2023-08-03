@@ -1,6 +1,11 @@
 // fonts
 
 @font-face {
+    font-family : main;
+    src : url('../fonts/SFNSDisplay-Light.otf');
+}
+
+@font-face {
     font-family: barker;
     src: url("../fonts/wg_barker.ttf");
 }
@@ -201,7 +206,6 @@ body {
 }
 
 @mixin glass {
-    .glass {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -227,7 +231,6 @@ body {
         }
 
         border: none;
-    }
 }
 
 // added classes
