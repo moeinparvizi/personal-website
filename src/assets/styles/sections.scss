@@ -33,19 +33,32 @@ $image: '../images/backgroundSection.png';
                 border-radius: 50%;
                 box-shadow: 0 0 10px $black;
             }
+            @media screen and (max-width:628px) {
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
 
         >.about-text {
             height: 250px;
 
-            >h5 {
+            @media screen and (max-width:628px){
+                position: absolute;top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 300px;
+            }
+
+            h5 {
                 font-weight: bold;
                 font-size: 1.6rem;
             }
 
             >a {
                 padding: 10px;
-                background-color: $pink;
+                background-color: $black;
                 border-radius: 10px;
                 color: $white;
                 transition: all .4s;
@@ -55,6 +68,93 @@ $image: '../images/backgroundSection.png';
                     border: 1px solid $pink;
                     box-shadow: 0 0 30px $pink;
                     transform: translateY(-8px);
+                }
+            }
+
+            >#skills-mobile {
+
+                >div {
+                    background-color: rgba(0, 0, 0, 0.329);
+
+                    >div {
+                        margin: 10px;
+                    }
+
+                    >div:nth-of-type(1) {
+                        background-color: rgb(71, 71, 255);
+
+                        >a {
+                            >i {
+                                color: $white;
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+
+                    >div:nth-of-type(2) {
+                        background-color: aqua;
+                        cursor: pointer;
+
+                        // >a {
+                        .tailwind-logo {
+                            fill: white;
+                            fill-rule: evenodd;
+                        }
+
+                        // }
+                    }
+
+                    >div:nth-of-type(3) {
+                        background-color: rgb(190, 190, 0);
+
+                        >a {
+                            color: $white;
+                            font-size: 3rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    >div:nth-of-type(4) {
+                        background-color: orange;
+
+                        >a {
+                            color: $white;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+                    >div:nth-of-type(5) {
+                        background-color: blue;
+
+                        >a {
+                            color: $white;
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+                    >div:nth-of-type(6) {
+                        background-color: orangered;
+
+                        >a {
+                            color: $white;
+                            font-size: 3rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+                    >div:nth-of-type(7) {
+                        background-color: orangered;
+
+                        >a {
+                            color: $white;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
                 }
             }
         }
@@ -122,6 +222,7 @@ $image: '../images/backgroundSection.png';
 
                     >.skill-planet {
                         border: 2px solid #FFF9BF;
+                        box-shadow: 0 0 10px #FFF9BF;
                         color: #FFF9BF;
                         font-size: 16px;
                         line-height: 26px;
@@ -144,6 +245,7 @@ $image: '../images/backgroundSection.png';
                     >.skill-planet {
                         border: 2px solid #A3B476;
                         color: #A3B476;
+                        box-shadow: 0 0 10px #A3B476;
                         font-size: 12px;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 8s infinite linear;
@@ -165,6 +267,7 @@ $image: '../images/backgroundSection.png';
                     >.skill-planet {
                         border: 2px solid #C77751;
                         color: #C77751;
+                        box-shadow: 0 0 10px #C77751;
                         font-size: 9px;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 6s infinite linear;
@@ -185,6 +288,7 @@ $image: '../images/backgroundSection.png';
 
                     >.skill-planet {
                         border: 2px solid #FBAF3F;
+                        box-shadow: 0 0 10px #FBAF3F;
                         font-size: 1rem;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 4s infinite linear;
@@ -213,6 +317,7 @@ $image: '../images/backgroundSection.png';
                     >.skill-planet {
                         border: 2px solid purple;
                         color: purple;
+                        box-shadow: 0 0 10px purple;
                         font-size: 18px;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 3s infinite linear;
@@ -235,6 +340,7 @@ $image: '../images/backgroundSection.png';
                     >.skill-planet {
                         border: 2px solid orangered;
                         color: orangered;
+                        box-shadow: 0 0 10px orangered;
                         font-size: 18px;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 20s infinite linear;
@@ -257,6 +363,7 @@ $image: '../images/backgroundSection.png';
                     >.skill-planet {
                         border: 2px solid pink;
                         color: pink;
+                        box-shadow: 0 0 10px pink;
                         font-size: 1.2rem;
                         line-height: 26px;
                         -webkit-animation: travelOrbit 23s infinite linear;
