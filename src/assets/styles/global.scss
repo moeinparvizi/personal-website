@@ -1,8 +1,8 @@
 // fonts
 
 @font-face {
-    font-family : main;
-    src : url('../fonts/SFNSDisplay-Light.otf');
+    font-family: main;
+    src: url('../fonts/SFNSDisplay-Light.otf');
 }
 
 @font-face {
@@ -33,6 +33,28 @@ $white: #ffffff;
 $t-white: #cccccc;
 $pink : #F668B4;
 
+// custom scroll bar 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $h-bg;
+    -webkit-box-shadow: inset 0 0 6px $pink;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $pink;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    border: 1px solid $pink;
+    -webkit-box-shadow: inset 0 0 6px $pink;
+}
+
+
 // repetitious codes
 
 :root {
@@ -53,6 +75,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     overflow-x: hidden;
+    position: relative;
+    z-index: -99;
 
     ul {
         list-style-type: none;
@@ -150,6 +174,46 @@ body {
     }
 }
 
+@-webkit-keyframes travelOrbit {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes travelOrbit {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes unrotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes unrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 // mixin
 
 @mixin stars($size) {
@@ -189,6 +253,7 @@ body {
         font-size: 10rem;
         letter-spacing: 5px;
     }
+
     @media screen and (max-width:903px) {
         font-size: 7rem;
         letter-spacing: 10px;
@@ -198,7 +263,7 @@ body {
         font-size: 5rem;
         letter-spacing: 5px;
     }
-    
+
     @media screen and (min-width:1401px) {
         font-size: 14rem;
         letter-spacing: 5px;
@@ -206,31 +271,31 @@ body {
 }
 
 @mixin glass {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 40px;
-        width: 90%;
-        // height: 90%;
-        border-radius: 25px;
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.384), inset 0 0 20px 0px white;
-        background: rgba(255, 255, 255, 0.205);
-        overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px;
+    width: 90%;
+    // height: 90%;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.384), inset 0 0 20px 0px white;
+    background: rgba(255, 255, 255, 0.205);
+    overflow: hidden;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            backdrop-filter: blur(3px);
-            background-color: rgba(255, 255, 255, 0.247);
-            z-index: -1;
-            border: none;
-        }
-
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.247);
+        z-index: -1;
         border: none;
+    }
+
+    border: none;
 }
 
 // added classes
