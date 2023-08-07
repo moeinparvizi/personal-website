@@ -188,8 +188,6 @@ $image: '../images/backgroundSection.png';
 
             .skill-orbit {
                 border-radius: 50%;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -198,23 +196,6 @@ $image: '../images/backgroundSection.png';
                 margin: auto;
                 transition: 3s all;
                 transform: perspective(900px);
-
-                .skill-planet {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    position: absolute;
-                    top: -15px;
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                    font-family: Arial;
-                    font-weight: 100;
-                    text-align: center;
-                    box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    transition: 1s all;
-                }
 
                 &:nth-child(1) {
                     width: 100%;
@@ -290,7 +271,7 @@ $image: '../images/backgroundSection.png';
                         border: 2px solid #FBAF3F;
                         box-shadow: 0 0 10px #FBAF3F;
                         font-size: 1rem;
-                        line-height: 26px;
+                        // line-height: 26px;
                         -webkit-animation: travelOrbit 4s infinite linear;
                         animation: travelOrbit 4s infinite linear;
                         -webkit-transform-origin: 50% 363%;
@@ -298,7 +279,6 @@ $image: '../images/backgroundSection.png';
 
                         >span {
                             margin: auto;
-                            border: 1px solid red;
                             >svg {
                                 >.tailwind-logo {
                                     fill: #FBAF3F;
@@ -392,8 +372,6 @@ $image: '../images/backgroundSection.png';
                     font-family: Arial;
                     font-weight: 100;
                     text-align: center;
-                    box-sizing: border-box;
-                    -moz-box-sizing: border-box;
                     transition: 1s all;
                 }
             }
