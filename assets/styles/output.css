@@ -640,20 +640,12 @@ video {
   width: 200px;
 }
 
-.w-\[450px\] {
-  width: 450px;
+.w-\[500px\] {
+  width: 500px;
 }
 
 .w-\[50px\] {
   width: 50px;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[500px\] {
-  width: 500px;
 }
 
 .list-none {
@@ -696,8 +688,16 @@ video {
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .bg-\[\#353535\] {
