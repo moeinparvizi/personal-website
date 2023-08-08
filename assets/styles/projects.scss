@@ -1,0 +1,39 @@
+@import "global";
+.projects{
+    >.row{
+        >.projects-card{
+            box-shadow: 0 0 30px $white;
+            >.projects-card-date{
+                box-shadow: 0 0 30px $white;
+                border-radius: 0 0 90% 0;
+                padding: .7em 2.5em 1.5rem .7em;
+            }
+
+            >.project-card-details{
+                transition: all .3s;
+                // >.project-card-details-socials{
+                //     transition: all .4s;
+                // }
+                >.project-card-details-about{
+                    opacity: .8;
+                    >div{
+                        cursor: pointer;
+                    }
+                }
+                >.project-card-details-socials{
+                    top: 0px;
+                    color: #c0c0c0;
+                    font-size: 20px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+
+            &:hover{
+                >.project-card-details{
+                    top: 48%;
+                }
+            }
+        }
+    }
+}
