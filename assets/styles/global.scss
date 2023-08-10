@@ -335,3 +335,25 @@ body {
         transform: translate(30px, 0)rotate(-45deg) !important;
     }
 }
+
+.box {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-3400px);
+}
+
+.show {
+  opacity: 1;
+  transform: none;
+}
+.showSkills {
+  .dot{
+    animation: skillsDot 2s linear forwards;
+  }
+  circle:nth-child(2){
+    animation: fadeInSkills 1s 2.5s linear forwards;
+  }
+  .skills-title{
+    animation: fadeInSkills 1s 2.5s linear forwards;
+  }
+}

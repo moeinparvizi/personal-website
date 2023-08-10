@@ -55,15 +55,4 @@
       }
     }
   }
-  &:hover{
-    .dot{
-      animation: skillsDot 2s linear forwards;
-    }
-    circle:nth-child(2){
-      animation: fadeInSkills 1s 2.5s linear forwards;
-    }
-    .skills-title{
-      animation: fadeInSkills 1s 2.5s linear forwards;
-    }
-  }
 }
