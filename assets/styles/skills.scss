@@ -14,7 +14,6 @@
       >.dot{
         // 360deg / 100 = 3.6
         transform: rotate(calc(3.6deg * var(--num)));
-        animation: skillsDot 2s linear forwards;
         &::before{
           content: '';
           position: absolute;
@@ -35,7 +34,7 @@
           height: 100%;
           fill: transparent;
           stroke-width: 2;
-          stroke: #191919;
+          stroke: transparent;
           transform: translate(5px,5px);
 
           &:nth-child(2){
@@ -43,19 +42,28 @@
             stroke-dasharray: 440;
             stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
             opacity: 0;
-            animation: fadeInSkills 1s 2.5s linear forwards;
           }
         }
       }
       >.skills-title{
         @include flexCenter;
           opacity: 0;
-          animation: fadeInSkills 1s 2.5s linear forwards;
         flex-direction: column;
         >h6{
           @include flexCenter;
         }
       }
+    }
+  }
+  &:hover{
+    .dot{
+      animation: skillsDot 2s linear forwards;
+    }
+    circle:nth-child(2){
+      animation: fadeInSkills 1s 2.5s linear forwards;
+    }
+    .skills-title{
+      animation: fadeInSkills 1s 2.5s linear forwards;
     }
   }
 }
