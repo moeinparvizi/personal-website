@@ -1,0 +1,61 @@
+@import 'global';
+
+#skills{
+  @include flexCenter;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 40px;
+  >div{
+    height: auto;
+    @include flexCenter;
+    flex-wrap: wrap;
+    position: relative;
+    >.percent{
+      >.dot{
+        // 360deg / 100 = 3.6
+        transform: rotate(calc(3.6deg * var(--num)));
+        animation: skillsDot 2s linear forwards;
+        &::before{
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: var(--clr);
+          box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+        }
+      }
+      >svg{
+        transform: rotate(270deg);
+        >circle{
+          width: 100%;
+          height: 100%;
+          fill: transparent;
+          stroke-width: 2;
+          stroke: #191919;
+          transform: translate(5px,5px);
+
+          &:nth-child(2){
+            stroke: var(--clr);
+            stroke-dasharray: 440;
+            stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+            opacity: 0;
+            animation: fadeInSkills 1s 2.5s linear forwards;
+          }
+        }
+      }
+      >.skills-title{
+        @include flexCenter;
+          opacity: 0;
+          animation: fadeInSkills 1s 2.5s linear forwards;
+        flex-direction: column;
+        >h6{
+          @include flexCenter;
+        }
+      }
+    }
+  }
+}

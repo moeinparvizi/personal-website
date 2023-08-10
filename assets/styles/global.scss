@@ -213,6 +213,24 @@ body {
     }
 }
 
+@keyframes skillsDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+@keyframes fadeInSkills{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 // mixin
 
 @mixin stars($size) {
@@ -295,6 +313,12 @@ body {
     }
 
     border: none;
+}
+
+@mixin flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // added classes

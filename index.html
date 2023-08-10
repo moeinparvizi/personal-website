@@ -11,7 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<!-- bootstrap icons -->
 	<link rel="stylesheet" href="assets/icons/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="assets/styles/output.css">
+  <!-- tailwind css CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 	<!-- CDN -->
 </head>
 
@@ -32,8 +33,8 @@
 					<div id="list" style="opacity: 0;visibility: hidden;">
 						<ul>
 							<li class="relative z-[200]"><a href="#about">about me</a></li>
-							<li class="relative z-[200] hidden md:flex"><a href="#skills">skills</a></li>
-							<li class="relative z-[200]"><a href="">projects</a></li>
+							<li class="relative z-[200] hidden md:flex"><a href="#goskills">skills</a></li>
+							<li class="relative z-[200]"><a href="#goprojects">projects</a></li>
 							<li class="relative z-[200]"><a href="">socials</a></li>
 						</ul>
 					</div>
@@ -125,38 +126,94 @@
 			</div>
 
 		</div>
-		<div id="skills" class="skills-circle-wrap hidden md:flex">
-			<div class="skills-circle">
-				<div class="skill-orbit">
-					<div class="skill-planet"><span>JS</span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span>CSS</span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span>HTML</span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span><svg viewBox="0 0 122.88 73.29">
-								<path class="tailwind-logo"
-									d="M61.44,0Q36.87,0,30.72,24.43q9.22-12.21,21.5-9.16c4.68,1.16,8,4.53,11.72,8.26,6,6.08,13,13.11,28.22,13.11q24.57,0,30.72-24.43-9.21,12.22-21.5,9.16c-4.68-1.16-8-4.53-11.72-8.26C83.64,7,76.67,0,61.44,0ZM30.72,36.64Q6.15,36.64,0,61.07q9.23-12.21,21.5-9.16c4.68,1.16,8,4.53,11.72,8.27,6,6.07,13,13.11,28.22,13.11q24.57,0,30.72-24.43Q82.95,61.07,70.66,58c-4.68-1.16-8-4.53-11.72-8.26-6-6.08-13-13.12-28.22-13.12Z" />
-							</svg></span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span><i class="bi bi-bootstrap"></i></span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span>Git</span></div>
-				</div>
-				<div class="skill-orbit">
-					<div class="skill-planet"><span>Sass</span></div>
-				</div>
-			</div>
-			<div class="skills-top-circle panel"></div>
+		<h5 id="goskills">skills</h5>
+		<div id="skills" class="flex justify-center flex-wrap relative items-center w-full">
+      <div class="w-full md:w-[50%] relative text-[#fff]">
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:orange;--num:100;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">100
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">html</p>
+            </div>
+        </div>
+
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:#0039a6;--num:98;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">98
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">css</p>
+            </div>
+        </div>
+
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:purple;--num:85;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">85
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">bootstrap</p>
+            </div>
+        </div>
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:aqua;--num:90;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">90
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">tailwind</p>
+            </div>
+        </div>
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:yellow;--num:95;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">95
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">javascript</p>
+            </div>
+        </div>
+        <div class="percent relative w-[150px] h-[150px]" style="--clr:orangered;--num:80;">
+            <div class="dot absolute inset-[5px] z-10"></div>
+            <svg class="relative w-[150px] h-[150px]">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills-title absolute inset-0">
+              <h6 class="text-white font-bold text-[3.5rem]">80
+                <span class="font-light text-white text-[2rem]">%</span>
+              </h6>
+              <p class="font-light text-[1.2rem] tracking-[2px] mt-[5px] uppercase leading-[2px] text-white">git</p>
+            </div>
+        </div>
+      </div>
 		</div>
 
-		<section class="projects mt-[80px]">
-			<div class="row flex flex-wrap justify-center items-center">
+		<section class="projects mt-[180px]">
+			<h5 id="goprojects">projects</h5> <div class="row flex flex-wrap justify-center items-center">
 				<figure class="projects-card w-[500px] h-[600px] relative overflow-hidden m-5 rounded-md">
 					<img class="w-[100%] h-[100%] bg-cover" src="assets/images/wp2793093-red-galaxy-wallpaper-hd.jpg" alt="project image">
 					<div class="projects-card-date flex flex-col justify-end absolute top-0 left-0 bg-[#fff]">
@@ -183,7 +240,9 @@
 				</figure>
 			</div>
 		</section>
-
+    <footer id="gofooter" class="footer">
+      
+    </footer>
 	</section>
 
 	<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->

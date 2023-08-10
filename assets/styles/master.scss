@@ -684,7 +684,18 @@ header {
     }
 }
 
-// for main content
+// for main content : about me
 
 @import 'sections';
+
+// skills
+
+@import 'skills';
+
+// projects card in this file
+
 @import 'projects';
+
+// footer css in this file
+
+@import 'footer';
