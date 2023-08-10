@@ -56,3 +56,14 @@ window.addEventListener('scroll', function(event) {
     this.document.getElementById('skills').classList.remove('showSkills')
   }
 })
+
+// copy my number in clipboard
+const text = '09107215381';
+const copyContent = async () => {
+  try {
+    await navigator.clipboard.writeText(text);
+    alert('copy number to your clipboard')
+  } catch (err) {
+    alert('i cant copy , open permission')
+  }
+}

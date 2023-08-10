@@ -29,8 +29,14 @@
                     top: 0px;
                     color: #c0c0c0;
                     font-size: 20px;
-                    padding-left: 10px;
-                    padding-right: 10px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    >div{
+                        &:hover{
+                            cursor: pointer;
+                            color: #fff;
+                        }
+                    }
                 }
             }
 

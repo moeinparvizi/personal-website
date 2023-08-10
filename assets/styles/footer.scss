@@ -1,5 +1,26 @@
 .footer{
-  border: 1px solid red;
+  >.glass{
+    z-index: 10;
+    margin-bottom: 50px;
+    @include glass;
+    margin-top: 50px;
+    >.footer-glass-socials{
+      >div{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        @include flexCenter;
+        font-size: 4rem;
+        transition: all .4s;
+        box-shadow: 0 0 21px 10px rgba(0,0,0,0.65);
+        &:hover{
+          transform: translateY(-5px);
+          box-shadow: 0 42px 22px 0 rgba(0,0,0,0.65);
+        }
+      }
+    }
+  }
   >.footer-box-shadow{
     animation:footerLightingFrist 3s linear alternate infinite;
     &::before{
@@ -8,7 +29,7 @@
       position: absolute;
       top: 0;
       left: -20%;
-      z-index: 1999;
+      // z-index: 1999;
       border-radius: 50%;
       height: 40%;
       animation: footerLightingSecond 3s 3s linear alternate infinite;
@@ -19,7 +40,7 @@
       position: absolute;
       top: 0;
       left: -20%;
-      z-index: 999;
+      // z-index: 999;
       border-radius: 50%;
       width: 140%;
       height: 40%;
