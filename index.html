@@ -75,14 +75,14 @@
 		</div>
 	</header>
 	<section class="more">
-		<h2 id="about">about me</h2>
+		<h2 id="about" class="box">about me</h2>
 		<div class="glass flex flex-col md:flex-row h-[590px] sm:h-auto justify-evenly">
-			<figure class="flex items-center justify-center">
+			<figure class="flex items-center box justify-center">
 				<img class="w-[200px] h-[200px] md:w-[300px] md:h-[300px]"
 					src="assets/images/me.jpg" alt="">
 
 			</figure>
-			<div class="about-text flex flex-col justify-evenly md:w-[70%] content-evenly m-4">
+			<div class="about-text flex flex-col box justify-evenly md:w-[70%] content-evenly m-4">
 				<h5>
 					who am i ?
 				</h5>
@@ -93,14 +93,14 @@
 			</div>
 
 		</div>
-		<h5 id="goskills">skills</h5>
-		<div id="skills" class="flex justify-center flex-wrap relative items-center w-full">
+		<h5 id="goskills" class="box">skills</h5>
+		<div id="skills" class="box skills flex justify-center flex-wrap relative items-center w-full">
       <div class="w-full md:w-[50%] relative text-[#fff]">
         <div class="percent relative w-[150px] h-[150px]" style="--clr:orange;--num:100;">
             <div class="dot absolute inset-[5px] z-10"></div>
             <svg class="relative w-[150px] h-[150px]">
               <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70" class="circle"></circle>
             </svg>
             <div class="skills-title absolute inset-0">
               <h6 class="text-white font-bold text-[3.5rem]">100
@@ -180,8 +180,9 @@
 		</div>
 
 		<section class="projects mt-[180px]">
-			<h5 id="goprojects">projects</h5> <div class="row flex flex-wrap justify-center items-center">
-				<figure class="projects-card w-[500px] h-[600px] relative overflow-hidden m-5 rounded-md">
+			<h5 class="box" id="goprojects">projects</h5>
+      <div class="row flex flex-wrap justify-center items-center">
+				<figure class="box projects-card w-[500px] h-[600px] relative overflow-hidden m-5 rounded-md">
 					<img class="w-[100%] h-[100%] bg-cover" src="assets/images/wp2793093-red-galaxy-wallpaper-hd.jpg" alt="project image">
 					<div class="projects-card-date flex flex-col justify-end absolute top-0 left-0 bg-[#fff]">
 						<div class="projects-card-date-day text-[40px] text-bold">12</div>
@@ -207,7 +208,7 @@
 				</figure>
 			</div>
 		</section>
-    <footer id="gofooter" class="footer">
+    <footer id="gofooter" class="footer box">
       
     </footer>
 	</section>
