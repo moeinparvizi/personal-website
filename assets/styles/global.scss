@@ -231,6 +231,52 @@ body {
     }
 }
 
+// footer lighting animation
+@keyframes footerLightingFrist{
+  0%{
+    box-shadow: 0;
+  }
+  30%{
+    box-shadow: 0 0 100px yellow,0 0 200px yellow;
+  }
+  70%{
+    box-shadow: 0 0 200px yellow,0 0 300px yellow;
+  }
+  100%{
+    box-shadow: 0 0 300px yellow,0 0 400px yellow;
+  }
+}
+
+@keyframes footerLightingSecond{
+  0%{
+    box-shadow: 0;
+  }
+  30%{
+    box-shadow: 0 0 100px $pink,0 0 200px $pink;
+  }
+  70%{
+    box-shadow: 0 0 200px $pink,0 0 300px $pink;
+  }
+  100%{
+    box-shadow: 0 0 300px $pink,0 0 400px $pink;
+  }
+}
+
+@keyframes footerLightingThird{
+  0%{
+    box-shadow: 0;
+  }
+  30%{
+    box-shadow: 0 0 100px red,0 0 200px red;
+  }
+  70%{
+    box-shadow: 0 0 200px red,0 0 300px red;
+  }
+  100%{
+    box-shadow: 0 0 300px red,0 0 400px red;
+  }
+}
+
 // mixin
 
 @mixin stars($size) {

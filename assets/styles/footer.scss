@@ -1,0 +1,31 @@
+.footer{
+  border: 1px solid red;
+  >.footer-box-shadow{
+    animation:footerLightingFrist 3s linear alternate infinite;
+    &::before{
+      content: '';
+      width: 140%;
+      position: absolute;
+      top: 0;
+      left: -20%;
+      z-index: 1999;
+      border-radius: 50%;
+      height: 40%;
+      animation: footerLightingSecond 3s 3s linear alternate infinite;
+    }
+    &::after{
+      content: '';
+      animation: footerLightingThird 3s 6s linear alternate infinite;
+      position: absolute;
+      top: 0;
+      left: -20%;
+      z-index: 999;
+      border-radius: 50%;
+      width: 140%;
+      height: 40%;
+    }
+  }
+}
+
+
+
