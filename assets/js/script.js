@@ -1,6 +1,6 @@
 function displayMenu(sub, menuH) {
   sub.style.transition = "1s";
-  if (sub.style.opacity == "0") {
+  if (sub.style.opacity === "0") {
     sub.style.opacity = "1";
     sub.style.visibility = 'visible'
     menuH.classList.add('clickMenuEffect');
@@ -13,13 +13,13 @@ function displayMenu(sub, menuH) {
   }
 }
 
+const socials = document.getElementById('socials');
 socials.style.top = "0px";
 socials.style.opacity = "0";
 function socialUp() {
-  let socials = document.getElementById('socials');
   socials.style.transition = ".4s";
-  if (socials.style.top == "0px") {
-    socials.style.top = "-55px";
+  if (socials.style.top === "0px") {
+    socials.style.top = "-73px";
     socials.style.opacity = "1";
   }
   else {
@@ -46,7 +46,7 @@ function checkBoxes() {
 }
 
 // scroll skills animation
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function() {
   const scroll = this.scrollY
   console.log(scroll)
   if (scroll > 1300) {
