@@ -26,7 +26,7 @@ moein parvizi
     <a href="https://github.com/moeinparvizi/personal-website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/moeinparvizi/personal-website">View Demo</a>
+    <a href="https://moeinparvizi.github.io/personal-website/">View Demo</a>
     ·
     <a href="https://github.com/moeinparvizi/personal-website/issues">Report Bug</a>
     ·
