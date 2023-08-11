@@ -95,7 +95,7 @@ It is my personal project and it is made with HTML ,CSS ,javascript ,sass ,tailw
 ### Built With
 
 * [![html][html5]][HTML5]
-* [![CSS][CSS]][CSS]
+* [![CSS3][CSS3]][CSS3]
 * [![TailwindCSS][TailwindCSS]][TailwindCSS]
 * [![SASS][SASS]][SASS]
 * [![JavaScript][JavaScript]][JavaScript]
