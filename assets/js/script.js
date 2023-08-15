@@ -15,7 +15,6 @@ function displayMenu(sub, menuH) {
 
 // project details shoing 
 const socials = document.getElementById('socials');
-console.log(socials)
 socials.style.top = "0px";
 socials.style.opacity = "0";
 function socialUp() {
