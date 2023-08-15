@@ -174,46 +174,6 @@ body {
     }
 }
 
-@-webkit-keyframes travelOrbit {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes travelOrbit {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes unrotate {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(-360deg);
-    }
-}
-
-@keyframes unrotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
 @keyframes skillsDot {
     0% {
         transform: rotate(0deg);
