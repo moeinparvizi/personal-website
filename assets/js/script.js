@@ -46,36 +46,36 @@ function socialUp2() {
 }
 
 
-//const socials3 = document.getElementById('socials3');
-//socials3.style.top = "0px";
-//socials3.style.opacity = "0";
-//function socialUp3() {
-//  socials3.style.transition = ".4s";
-//  if (socials3.style.top === "0px") {
-//    socials3.style.top = "-73px";
-//    socials3.style.opacity = "1";
-//  }
-//  else {
-//    socials3.style.top = "0px";
-//    socials3.style.opacity = "0";
-//  }
-//}
+const socials3 = document.getElementById('socials3');
+socials3.style.top = "0px";
+socials3.style.opacity = "0";
+function socialUp3() {
+  socials3.style.transition = ".4s";
+  if (socials3.style.top === "0px") {
+    socials3.style.top = "-73px";
+    socials3.style.opacity = "1";
+  }
+  else {
+    socials3.style.top = "0px";
+    socials3.style.opacity = "0";
+  }
+}
 //
 //
-//const socials4 = document.getElementById('socials4');
-//socials4.style.top = "0px";
-//socials4.style.opacity = "0";
-//function socialUp4() {
-//  socials4.style.transition = ".4s";
-//  if (socials4.style.top === "0px") {
-//    socials4.style.top = "-73px";
-//    socials4.style.opacity = "1";
-//  }
-//  else {
-//    socials4.style.top = "0px";
-//    socials4.style.opacity = "0";
-//  }
-//}
+const socials4 = document.getElementById('socials4');
+socials4.style.top = "0px";
+socials4.style.opacity = "0";
+function socialUp4() {
+  socials4.style.transition = ".4s";
+  if (socials4.style.top === "0px") {
+    socials4.style.top = "-73px";
+    socials4.style.opacity = "1";
+  }
+  else {
+    socials4.style.top = "0px";
+    socials4.style.opacity = "0";
+  }
+}
 //
 //
 //const socials5 = document.getElementById('socials5');
@@ -153,7 +153,7 @@ const copyMail = async () => {
   try {
     await navigator.clipboard.writeText(gmail);
     alert('copy gmail to your clipboard');
-  }catch (err) {
+  } catch (err) {
     alert('i cant copy , please open your permission');
   }
 }
