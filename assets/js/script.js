@@ -91,22 +91,21 @@ function socialUp5() {
     socials5.style.opacity = "0";
   }
 }
-//
-//
-//const socials6 = document.getElementById('socials6');
-//socials6.style.top = "0px";
-//socials6.style.opacity = "0";
-//function socialUp6() {
-//  socials6.style.transition = ".4s";
-//  if (socials6.style.top === "0px") {
-//    socials6.style.top = "-73px";
-//    socials6.style.opacity = "1";
-//  }
-//  else {
-//    socials6.style.top = "0px";
-//    socials6.style.opacity = "0";
-//  }
-//}
+
+const socials6 = document.getElementById('socials6');
+socials6.style.top = "0px";
+socials6.style.opacity = "0";
+function socialUp6() {
+  socials6.style.transition = ".4s";
+  if (socials6.style.top === "0px") {
+    socials6.style.top = "-73px";
+    socials6.style.opacity = "1";
+  }
+  else {
+    socials6.style.top = "0px";
+    socials6.style.opacity = "0";
+  }
+}
 
 // scroll animation
 const boxes = document.querySelectorAll(".box");
