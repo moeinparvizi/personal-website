@@ -107,6 +107,21 @@ function socialUp6() {
   }
 }
 
+const socials7 = document.getElementById('socials7');
+socials7.style.top = "0px";
+socials7.style.opacity = "0";
+function socialUp7() {
+  socials7.style.transition = ".4s";
+  if (socials7.style.top === "0px") {
+    socials7.style.top = "-73px";
+    socials7.style.opacity = "1";
+  }
+  else {
+    socials7.style.top = "0px";
+    socials7.style.opacity = "0";
+  }
+}
+
 // scroll animation
 const boxes = document.querySelectorAll(".box");
 window.addEventListener('scroll', checkBoxes);
