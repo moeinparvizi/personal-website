@@ -76,22 +76,21 @@ function socialUp4() {
     socials4.style.opacity = "0";
   }
 }
-//
-//
-//const socials5 = document.getElementById('socials5');
-//socials5.style.top = "0px";
-//socials5.style.opacity = "0";
-//function socialUp5() {
-//  socials5.style.transition = ".4s";
-//  if (socials5.style.top === "0px") {
-//    socials5.style.top = "-73px";
-//    socials5.style.opacity = "1";
-//  }
-//  else {
-//    socials5.style.top = "0px";
-//    socials5.style.opacity = "0";
-//  }
-//}
+
+const socials5 = document.getElementById('socials5');
+socials5.style.top = "0px";
+socials5.style.opacity = "0";
+function socialUp5() {
+  socials5.style.transition = ".4s";
+  if (socials5.style.top === "0px") {
+    socials5.style.top = "-73px";
+    socials5.style.opacity = "1";
+  }
+  else {
+    socials5.style.top = "0px";
+    socials5.style.opacity = "0";
+  }
+}
 //
 //
 //const socials6 = document.getElementById('socials6');
