@@ -155,7 +155,7 @@ function checkBoxes() {
 }
 
 // scroll skills animation
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
   const scroll = this.scrollY
   if (scroll > 1300) {
     this.document.getElementById('skills').classList.add('showSkills');
@@ -185,3 +185,28 @@ const copyMail = async () => {
     alert('i cant copy , please open your permission');
   }
 }
+
+// customize mouse
+let x = document.querySelector('.cursor')
+window.addEventListener('mousemove', (e) => {
+  x.style.display = 'flex'
+  x.style.left = e.pageX + 'px'
+  x.style.top = e.pageY + 'px'
+
+  document.title = 'moein parvizi'
+})
+document.body.addEventListener('mouseleave', () => {
+  x.style.display = 'none'
+  // change title of tab when left user
+  document.title = 'come back ;('
+})
+window.addEventListener('click', () => {
+  x.style.width = '30px'
+  x.style.height = '30px'
+  x.style.transition = '.2s'
+  setTimeout(() => {
+    x.style.width = '50px'
+    x.style.height = '50px'
+    x.style.transition = '0'
+  }, 100);
+})
