@@ -136,6 +136,20 @@ function socialUp8() {
     socials8.style.opacity = "0";
   }
 }
+const socials9 = document.getElementById('socials9');
+socials9.style.top = "0px";
+socials9.style.opacity = "0";
+function socialUp9() {
+  socials9.style.transition = ".4s";
+  if (socials9.style.top === "0px") {
+    socials9.style.top = "-73px";
+    socials9.style.opacity = "1";
+  }
+  else {
+    socials9.style.top = "0px";
+    socials9.style.opacity = "0";
+  }
+}
 
 // scroll animation
 const boxes = document.querySelectorAll(".box");
@@ -155,7 +169,7 @@ function checkBoxes() {
 }
 
 // scroll skills animation
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const scroll = this.scrollY
   if (scroll > 1300) {
     this.document.getElementById('skills').classList.add('showSkills');
