@@ -169,7 +169,7 @@ function checkBoxes() {
 }
 
 // scroll skills animation
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
   const scroll = this.scrollY
   if (scroll > 1300) {
     this.document.getElementById('skills').classList.add('showSkills');
@@ -184,7 +184,18 @@ const text = '09107215381';
 const copyContent = async () => {
   try {
     await navigator.clipboard.writeText(text);
-    alert('copy number to your clipboard');
+    Swal.fire({
+      title: 'copy number in your clipboard',
+      icon: 'success',
+      confirmButtonColor: '#F668B4',
+      background: 'url(../ images / backgroundSection.png)',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
   } catch (err) {
     alert('i cant copy , open permission');
   }
@@ -194,7 +205,18 @@ const gmail = 'giventulip@gmail.com'
 const copyMail = async () => {
   try {
     await navigator.clipboard.writeText(gmail);
-    alert('copy gmail to your clipboard');
+    Swal.fire({
+      title: 'copy gmail in your clipboard',
+      icon: 'success',
+      confirmButtonColor: '#F668B4',
+      background: 'url(../ images / backgroundSection.png)',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
   } catch (err) {
     alert('i cant copy , please open your permission');
   }
@@ -217,10 +239,8 @@ document.body.addEventListener('mouseleave', () => {
 window.addEventListener('click', () => {
   x.style.width = '30px'
   x.style.height = '30px'
-  x.style.transition = '.2s'
   setTimeout(() => {
     x.style.width = '50px'
     x.style.height = '50px'
-    x.style.transition = '0'
   }, 100);
 })

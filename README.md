@@ -105,6 +105,8 @@ It is my personal project and it is made with HTML ,CSS ,javascript ,sass ,tailw
 * [![TailwindCSS][TailwindCSS]][TailwindCSS]
 * [![SASS][SASS]][SASS]
 * [![JavaScript][JavaScript]][JavaScript]
+* [![animatecss][https://animate.style/][https://animate.style/]
+* [![sweetalert2][https://sweetalert2.github.io/][https://sweetalert2.github.io/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
