@@ -79,6 +79,11 @@ body {
     z-index: -99;
     height: 200vh;
 
+    >.pages-line{
+      background-color: $pink;
+        box-shadow: 0 10px 30px $pink;
+    }
+
     ul {
         list-style-type: none;
     }
@@ -379,5 +384,5 @@ body {
   top: -500px;
   z-index: 999999;
   rotate: -90deg;
-  transform: translate(-13px);
+  transform: translateX(5px),translateY(5px);
 }

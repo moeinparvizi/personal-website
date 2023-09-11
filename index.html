@@ -21,6 +21,8 @@
 </head>
 
 <body>
+  <div class="pages-line fixed top-[0] right-[0] z-[9999999999] h-[5px] rounded-md">
+  </div>
   <div class="cursor"></div>
   <header style="overflow: hidden;">
     <nav class="row-between">
@@ -74,8 +76,8 @@
     <div class="text-header">
       <div class="text-header-center">
         <h1>I`m moein parvizi <span>&</span> i do programming.</h1>
-        <a href="https://www.github.com/moeinparvizi">github page</a>
-        <a href="">get resume</a>
+        <a href="">github page</a>
+        <a href="" onclick="resume(event)">get resume</a>
       </div>
     </div>
   </header>
@@ -95,7 +97,7 @@
           textbooks at school. In 2021, I wrote my first project (not to mention, I was not interested), I became
           interested over time, and in 2023, I continued my activity seriously.
         </p>
-        <a class="mx-auto my-10" href="">Download Resume</a>
+        <a class="mx-auto my-10" href="" onclick="resume(event)">Download Resume</a>
       </div>
 
     </div>
@@ -516,7 +518,8 @@
             </a>
           </div>
           <div onclick="copyMail()">
-            <i class="bi bi-envelope-at-fill"></i>
+            <a href="mailto: giventulip@gmail.com"><i class="bi bi-envelope-at-fill"></i>
+            </a>
           </div>
         </div>
         <p class="copyright-text mt-[50px]">Copyright &copy; 2023 All Rights Reserved by

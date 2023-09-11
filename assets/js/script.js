@@ -184,18 +184,7 @@ const text = '09107215381';
 const copyContent = async () => {
   try {
     await navigator.clipboard.writeText(text);
-    Swal.fire({
-      title: 'copy number in your clipboard',
-      icon: 'success',
-      confirmButtonColor: '#F668B4',
-      background: 'url(../ images / backgroundSection.png)',
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
-    })
+    sweetAlert('copy number in your clipboard', true)
   } catch (err) {
     alert('i cant copy , open permission');
   }
@@ -205,18 +194,7 @@ const gmail = 'giventulip@gmail.com'
 const copyMail = async () => {
   try {
     await navigator.clipboard.writeText(gmail);
-    Swal.fire({
-      title: 'copy gmail in your clipboard',
-      icon: 'success',
-      confirmButtonColor: '#F668B4',
-      background: 'url(../ images / backgroundSection.png)',
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
-    })
+    sweetAlert('copy gmail in your clipboard', true)
   } catch (err) {
     alert('i cant copy , please open your permission');
   }
@@ -225,10 +203,11 @@ const copyMail = async () => {
 // customize mouse
 let x = document.querySelector('.cursor')
 window.addEventListener('mousemove', (e) => {
+  x.style.transition = '0s'
   x.style.display = 'flex'
   x.style.left = e.pageX + 'px'
   x.style.top = e.pageY + 'px'
-
+  // change title of tab when come back user
   document.title = 'moein parvizi'
 })
 document.body.addEventListener('mouseleave', () => {
@@ -237,6 +216,7 @@ document.body.addEventListener('mouseleave', () => {
   document.title = 'come back ;('
 })
 window.addEventListener('click', () => {
+  x.style.transition = '.2s'
   x.style.width = '30px'
   x.style.height = '30px'
   setTimeout(() => {
@@ -244,3 +224,43 @@ window.addEventListener('click', () => {
     x.style.height = '50px'
   }, 100);
 })
+
+// page line
+const Th = document.querySelector('section').clientHeight
+const line = document.querySelector('.pages-line')
+window.addEventListener('scroll', function() {
+  const st = this.scrollY
+  line.style.width = (((st * 100) / Th) + 1) + '%'
+  if (st == 0) {
+    line.style.display = 'none'
+  } else {
+    line.style.display = 'flex'
+  }
+})
+
+// alert for resume
+const resume = (e) => {
+  e.preventDefault()
+  sweetAlert('the resume isn`t  yet complete', false)
+}
+
+// sweet alert library for alert in page
+const sweetAlert = (str, bool) => {
+  let icon
+  if (bool == true) {
+    icon = 'success'
+  } else {
+    icon = 'warning'
+  }
+  Swal.fire({
+    title: str,
+    icon: icon,
+    confirmButtonColor: '#F668B4',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
+}
