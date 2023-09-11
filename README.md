@@ -80,6 +80,8 @@ Hints :
 * build with animation css
 * build with vanila js
 * It has been tried to clean the code
+* work with animatecss was added
+* work with sweetAlert2 js library was added
 
 It is my personal project and it is made with HTML ,CSS ,javascript ,sass ,tailwindcss ; It has been tried to be played less and cleaner by using mixin in css and forloops in css ; Static project files are segmented for better readability ; The default theme for this website is galaxy and stars . using dynamic with js .
 
@@ -105,8 +107,8 @@ It is my personal project and it is made with HTML ,CSS ,javascript ,sass ,tailw
 * [![TailwindCSS][TailwindCSS]][TailwindCSS]
 * [![SASS][SASS]][SASS]
 * [![JavaScript][JavaScript]][JavaScript]
-* [![animatecss][https://animate.style/][https://animate.style/]
-* [![sweetalert2][https://sweetalert2.github.io/][https://sweetalert2.github.io/]
+* [animatecss](https://animate.style/)
+* [sweetalert2](https://sweetalert2.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
