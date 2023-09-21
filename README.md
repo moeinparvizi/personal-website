@@ -153,7 +153,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- ROADMAP -->
 ## Roadmap
 
-- [*] add projects to project section
+- [X] add projects to project section
 - [ ] add blog page
 - [ ] rebuilding with reactjs
 
