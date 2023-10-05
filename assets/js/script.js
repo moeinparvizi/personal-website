@@ -169,7 +169,7 @@ function checkBoxes() {
 }
 
 // scroll skills animation
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const scroll = this.scrollY
   if (scroll > 1300) {
     this.document.getElementById('skills').classList.add('showSkills');
@@ -228,7 +228,7 @@ window.addEventListener('click', () => {
 // page line
 const Th = document.querySelector('section').clientHeight
 const line = document.querySelector('.pages-line')
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const st = this.scrollY
   line.style.width = (((st * 100) / Th) + 1) + '%'
   if (st == 0) {
@@ -264,3 +264,17 @@ const sweetAlert = (str, bool) => {
     }
   })
 }
+
+// scroll to in ham munu
+document.querySelector('#aboutMenu').addEventListener('click', () => {
+  document.querySelector('#about').scrollIntoView()
+})
+document.querySelector('#skillsMenu').addEventListener('click', () => {
+  document.querySelector('#skills').scrollIntoView()
+})
+document.querySelector('#projectsMenu').addEventListener('click', () => {
+  document.querySelector('.projects').scrollIntoView()
+})
+document.querySelector('#socialsMenu').addEventListener('click', () => {
+  document.querySelector('#gofooter').scrollIntoView()
+})
